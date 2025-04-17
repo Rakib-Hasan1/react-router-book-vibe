@@ -1,6 +1,17 @@
 import React from "react";
 import { Link } from "react-router";
 
+const links = (
+  <>
+    <Link to="/">
+      <li className="m-2">Home</li>
+    </Link>
+    <Link to="/readList">
+      <li className="m-2">ReadList</li>
+    </Link>
+  </>
+);
+
 const Navbar = () => {
   return (
     <div className="w-11/12 mx-auto my-4 navbar bg-base-100 work-sans">
@@ -31,7 +42,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
+            {/* <li>
               <a>Home</a>
             </li>
             <li>
@@ -39,14 +50,15 @@ const Navbar = () => {
             </li>
             <li>
               <a>Pages to Read</a>
-            </li>
+            </li> */}
+            {links}
           </ul>
         </div>
         <a className="font-bold text-3xl cursor-pointer">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          {/* <li>
             <a>Home</a>
           </li>
 
@@ -55,6 +67,10 @@ const Navbar = () => {
           </li>
           <li>
             <a>Pages to Read</a>
+          </li> */}
+          {links}
+          <li className="mt-2">
+            Pages to Read
           </li>
         </ul>
       </div>
